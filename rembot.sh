@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # skip odd weeks, this script is executed on Sunday
-week=$(date +%V)
+week=$(date +%-V)
 if [ $(($week % 2)) != 0 ]
 then
         exit
