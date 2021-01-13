@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # skip odd weeks, this script is executed on Sunday
-week=$(date +%-V)
-if [ $(($week % 2)) != 0 ]
+week=$(date +%-V --date="next wednesday")
+if [ $((week % 2)) == 0 ]
 then
         exit
 fi
